@@ -1,7 +1,7 @@
 class state
 { 
   
-    final static int NO_OF_CHARS = 256; 
+    final static int no_of_char = 100000; 
   
         for (int i = 0; i < n; i++)
         { 
@@ -9,7 +9,7 @@ class state
         } 
   
         int max_distinct = 0; 
-        for (int i = 0; i < NO_OF_CHARS; i++)
+        for (int i = 0; i < no_of_char; i++)
         { 
             if (count[i] != 0)
             { 
@@ -39,7 +39,8 @@ class state
                     subs = str.substring(j, i); 
                 int subs_lenght = subs.length(); 
                 int sub_distinct_char = max_distinct_char(subs, subs_lenght); 
-                 if (subs_lenght < minl && max_distinct == sub_distinct_char) { 
+                 if (subs_lenght < minl && max_distinct == sub_distinct_char)
+                 { 
                     minl = subs_lenght; 
                 } 
             } 
@@ -52,9 +53,7 @@ class state
         String str = "abcda"; 
   
         int len = smallesteSubstr_maxDistictChar(str); 
-        System.out.println(" The length of the smallest substring"
-                + " consisting of maximum distinct "
-                + "characters : "+len); 
+        System.out.println(len); 
     } 
 } 
   
